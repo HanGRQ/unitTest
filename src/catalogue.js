@@ -37,4 +37,8 @@ export class Catalogue {
     return result;
   }
 
+  batchAddProducts(batch) {
+    return undefined
+  }
+
 }
