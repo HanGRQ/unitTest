@@ -38,7 +38,11 @@ export class Catalogue {
   }
 
   batchAddProducts(batch) {
-    return undefined
+    const validAdditions = batch.products.filter(
+      (product) => product.quantityInStock > 0
+    )
+    validAdditions.forEach((p) => this.addProduct(p) );
+    return validAdditions.length;
   }
 
 }
